@@ -75,37 +75,47 @@
             <div class="contact">
                 <h3>Contact Formulier</h3>
                 <p class="extra-info">Voor vragen of opmerkingen kunt u telefonisch, via e-mail of met ons contactformulier contact opnemen.</p>    
-                <form id="contact-form">
-    
+                <form id="contact-form" action="https://formspree.io/f/xkgogoav" method="POST">
                     <p>
                         <label>Naam</label>
                         <input type="text" name="name" id="name" required>
                     </p>
-    
-    
-    
+            
                     <p>
                         <label>E-mail Adres</label>
                         <input type="email" name="email" id="email" required>
                     </p>
-    
+            
                     <p>
                         <label>Telefoonnummer</label>
                         <input type="text" name="phone" id="phone">
                     </p>
-    
+            
                     <p class="full">
                         <label>Vraag / Opmerking</label>
                         <textarea name="message" rows="5" id="message"></textarea>
                     </p>
-    
+            
                     <p class="full">
                         <button type="submit">Versturen</button>
                     </p>
-    
+                    <script>
+                        document.getElementById("contact-form").addEventListener("submit", function(event){
+                            let name = document.getElementById("name").value;
+                            let email = document.getElementById("email").value;
+                            
+                            if (!name || !email) {
+                                event.preventDefault(); // Voorkomt dat het formulier wordt verzonden
+                                alert("Vul alstublieft alle verplichte velden in.");
+                            }
+                        });
+                    </script>
+                        
                 </form>
+                
                 <!-- End #contact-form -->
             </div>
+            
             <!-- End .contact -->
     
         </div>
