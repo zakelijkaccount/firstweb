@@ -1,0 +1,226 @@
+/* Algemene stijlen */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zorgt ervoor dat de body altijd minimaal de hoogte van het scherm heeft */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+main {
+    flex-grow: 1; /* Zorgt ervoor dat de inhoud de beschikbare ruimte opvult */
+}
+
+
+
+header {
+    background: #13235d;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.7em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff; /* Standaard kleur van de links */
+    text-decoration: none; /* Verwijdert onderstreping */
+    font-size: 16px; /* Voeg een standaard lettergrootte toe */
+    padding: 5px 10px; /* Voor een comfortabelere klikruimte */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Soepele overgangseffecten */
+}
+
+nav ul li a:hover {
+    color: #13235d; /* Verandert de tekstkleur bij hover */
+    background-color: #ffffff; /* Voeg een subtiele achtergrondkleur toe */
+    border-radius: 5px; /* Rond hoeken af voor een zachter effect */
+    text-decoration: underline; /* Onderstreep de tekst bij hover */
+}
+
+img {
+    width: 100%;   /* Zorgt ervoor dat de afbeelding de volledige breedte gebruikt */
+    height: auto;  /* Houdt de verhoudingen van de afbeelding intact */
+    display: block; /* Verwijdert extra witruimte onder de afbeelding */
+}
+
+.hero {
+    text-align: center;
+    margin-left: 60px;
+    margin-right: 60px;
+
+}
+
+.welkom h2 {
+    font-size: 2.2em;
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+/* BUTTON? */
+/* ======================================================= */ 
+
+.button {
+    display: inline-block;
+    padding: 12px;
+    border: 1px solid #4f4f4f;
+    border-radius: 8px;
+    transition: all 0.2s ease-in;
+    position: relative;
+    overflow: hidden;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    z-index: 1;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+  
+.button:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.25);
+    top: 100%;
+    width: 140%;
+    height: 180%;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+  
+.button:after {
+    content: "";
+    position: absolute;
+    left: 55%;
+    transform: translateX(-50%) scaleY(1) scaleX(1.45);
+    top: 180%;
+    width: 160%;
+    height: 190%;
+    background-color: #13235d;
+    border-radius: 50%;
+    display: block;
+    transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+    z-index: -1;
+}
+  
+.button:hover {
+    color: #ffffff;
+    border: 1px solid #13235d;
+}
+  
+.button:hover:before {
+    top: -35%;
+    background-color: #13235d;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+    top: -45%;
+    background-color: #13235d;
+    transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+  
+
+
+
+
+.blokjes-wrapper {
+    display: flex;
+    justify-content: center; 
+    padding: 20px 0 20px;
+    background-color: #ffffff;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.in-blokjes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap; /* Zorgt ervoor dat de blokken in nieuwe rijen gaan als de ruimte vol is */
+    gap: 20px; /* Verminderde afstand tussen de blokken */
+}
+
+.blokjes {
+    flex-basis: calc(33.33% - 20px); /* Zorgt voor drie blokjes per rij, inclusief tussenruimte */
+    max-width: calc(33.33% - 20px); /* Maximale breedte gelijk aan flex-basis */
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraal uitlijnen van de inhoud */
+    padding: 20px; /* Verminderde padding */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #13235d;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: #7A7A7A;
+    font-size: 14px;
+    height: auto; /* Flexibele hoogte */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Voor hover-effect */
+}
+
+.blokjes:hover {
+    transform: translateY(-10px); /* Blokje omhoog laten zweven */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Diepere schaduw */
+}
+
+.blokjes img {
+    width: 80px; /* Kleinere afbeeldingen */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.blokjes h3 {
+    font-size: 24px; /* Kleiner lettertype voor titels */
+    color: #13235d;
+    margin-bottom: 8px; 
+    text-align: center;
+}
+
+.blokjes p {
+    font-size: 16px; /* Kleiner lettertype voor paragrafen */
+    color: #555;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+}
+
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #13235d;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+
+
+/* contact formulier 
+=========================================================== */ 
+

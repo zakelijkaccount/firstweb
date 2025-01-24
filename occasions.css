@@ -1,0 +1,174 @@
+/* Algemene stijlen */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background: #13235d;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.7em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff; /* Standaard kleur van de links */
+    text-decoration: none; /* Verwijdert onderstreping */
+    font-size: 16px; /* Voeg een standaard lettergrootte toe */
+    padding: 5px 10px; /* Voor een comfortabelere klikruimte */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Soepele overgangseffecten */
+}
+
+nav ul li a:hover {
+    color: #13235d; /* Verandert de tekstkleur bij hover */
+    background-color: #ffffff; /* Voeg een subtiele achtergrondkleur toe */
+    border-radius: 5px; /* Rond hoeken af voor een zachter effect */
+    text-decoration: underline; /* Onderstreep de tekst bij hover */
+}
+
+/* Occasions sectie */
+#occasions {
+    margin-top: 40px;
+}
+
+#occasions h2 {
+    text-align: center;
+    margin-bottom: 5px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Auto-items grid */
+.occasion-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.beschrijving {
+    display: flex;
+    font-size: 1em;
+    color: #333333;
+    max-width: 1100px;
+    margin:  auto;
+}
+
+
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px
+}
+
+
+.button {
+    display: inline-block; /* Zorgt dat de button alleen zo breed is als nodig */
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px; /* Houdt de padding binnen de button */
+    background-color: #13235d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center; /* Zorgt ervoor dat de tekst in het midden blijft */
+    max-width: fit-content; /* Maakt de breedte van de button afhankelijk van de inhoud */
+    cursor: pointer; /* Geeft een handcursor bij hover */
+    transition: background-color 0.3s ease; /* Maakt de hover-overgang vloeiend */
+}
+
+/* Hover-effect voor de button */
+.button:hover {
+    background-color: #ffcc00; /* Donkere kleur bij hover */
+}
+
+
+/* Individueel auto-item */
+.occasion-item {
+    display: flex;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.occasion-item:hover {
+    transform: scale(1.02);
+}
+
+/* Afbeelding van de auto */
+.occasion-item img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Details van de auto */
+.occasion-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.occasion-details h3 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.occasion-details p {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.occasion-details .btn {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #13235d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.occasion-details .btn:hover {
+    background-color: #ffcc00;
+}
+
+/* Footer */
+footer {
+    background-color: #13235d;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 200px;
+}
+

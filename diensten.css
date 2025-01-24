@@ -1,0 +1,131 @@
+/* Algemene stijlen */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+
+header {
+    background: #13235d;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.7em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff; /* Standaard kleur van de links */
+    text-decoration: none; /* Verwijdert onderstreping */
+    font-size: 16px; /* Voeg een standaard lettergrootte toe */
+    padding: 5px 10px; /* Voor een comfortabelere klikruimte */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Soepele overgangseffecten */
+}
+
+nav ul li a:hover {
+    color: #13235d; /* Verandert de tekstkleur bij hover */
+    background-color: #ffffff; /* Voeg een subtiele achtergrondkleur toe */
+    border-radius: 5px; /* Rond hoeken af voor een zachter effect */
+    text-decoration: underline; /* Onderstreep de tekst bij hover */
+}
+
+/* Stijlen voor de sectie 'diensten' */
+.diensten {
+    display: flex;
+    flex-direction: column; /* Zorgt voor verticale plaatsing */
+    justify-content: center; /* Verticaal centreren */
+    align-items: center; /* Horizontaal centreren */
+    background-color: #ffffff;
+    max-width: 1000px;
+    width: 90%;
+    text-align: center;
+    background-position: center;
+    color: #ffffff; /* Kleur van de tekst */
+    min-height: 100vh; /* Zorgt ervoor dat de sectie ten minste de volledige hoogte van het scherm heeft */
+    margin: 0 auto; /* Zorgt voor horizontale centrering */
+}
+
+/* Stijl voor de hoofdtitel */
+h2 {
+    font-size: 2.5em;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+/* Stijlen voor de individuele dienst-secties */
+.dienst details {
+    margin: 15px 0;
+    background-color: rgba(19, 35, 93, 0.8); /* Donkere achtergrond met transparantie */
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover-effecten voor de details secties */
+.dienst details:hover {
+    background-color: rgba(19, 35, 93, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Stijlen voor de summary (de titels van de diensten) */
+.dienst summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ffffff;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Stijlen voor de open details secties */
+.dienst details[open] summary {
+    color: #ffcc00; /* Highlight kleur bij openen */
+}
+
+/* Stijlen voor de tekst binnen details */
+.dienst details p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+}
+
+footer {
+    background-color: #13235d;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+
+/* Media query voor mobiele apparaten */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 2em;
+    }
+    .diensten {
+        padding: 20px;
+    }
+    .dienst details {
+        padding: 10px;
+    }
+}
