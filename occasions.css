@@ -172,3 +172,82 @@ footer {
     margin-top: 200px;
 }
 
+
+/* Media query voor schermen kleiner dan 768px (bijvoorbeeld mobiele telefoons) */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Maak de standaard tekstgrootte kleiner */
+    }
+
+    header h1 {
+        font-size: 2em; /* Kleiner lettertype voor de koptekst */
+        padding: 0.5rem 0; /* Minder padding rond de header */
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Navigatielinks onder elkaar zetten */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Extra ruimte tussen de links */
+    }
+
+    #occasions h2 {
+        font-size: 1.8em; /* Kleiner lettertype voor de occasions-kop */
+        margin: 20px 0;
+    }
+
+    .occasion-list {
+        grid-template-columns: 1fr; /* Eén kolom voor auto-items op mobiel */
+        margin-left: 20px; /* Minder marge aan de zijkanten */
+        margin-right: 20px;
+        gap: 20px; /* Iets kleinere afstand tussen de items */
+    }
+
+    .occasion-item {
+        flex-direction: column; /* Laat de afbeelding en details stapelen */
+        margin-bottom: 40px;
+    }
+
+    .occasion-item img {
+        width: 100%; /* Afbeelding neemt volledige breedte in */
+        height: auto;
+    }
+
+    .occasion-details h3 {
+        font-size: 1.5em; /* Kleiner lettertype voor de titels */
+    }
+
+    .occasion-details p {
+        font-size: 1em; /* Kleiner lettertype voor details */
+    }
+
+    .occasion-details .btn {
+        padding: 8px 15px; /* Kleinere knoppen */
+        font-size: 1em;
+    }
+
+    .beschrijving {
+        font-size: 0.9em; /* Kleinere tekstgrootte voor beschrijvingen */
+        padding: 10px;
+    }
+
+    .container1 {
+        flex-direction: column; /* Stapel de inhoud in de container */
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .button {
+        padding: 8px 15px; /* Knoppen compacter maken */
+        font-size: 1em;
+    }
+
+    footer {
+        font-size: 14px; /* Kleinere tekst in de footer */
+        padding: 10px 15px;
+    }
+}
+
