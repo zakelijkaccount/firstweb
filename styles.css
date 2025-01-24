@@ -219,8 +219,36 @@ footer {
 }
 
 
+/* Media query voor schermen kleiner dan 768px (bijvoorbeeld mobiele telefoons) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em; /* Kleiner lettertype voor koptekst */
+    }
 
+    nav ul li {
+        display: block; /* Zet de navigatielinks onder elkaar */
+        margin: 10px 0;
+    }
 
-/* contact formulier 
-=========================================================== */ 
+    .hero {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: left; /* Tekst uitlijnen aan de linkerkant */
+    }
+
+    .blokjes-wrapper {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .blokjes {
+        flex-basis: calc(100% - 20px); /* Volledige breedte voor blokjes op mobiel */
+        max-width: calc(100% - 20px);
+    }
+
+    footer {
+        font-size: 14px; /* Kleiner lettertype in de footer */
+        padding: 15px; /* Iets meer padding in de footer */
+    }
+}
 
