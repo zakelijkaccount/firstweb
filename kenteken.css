@@ -1,0 +1,223 @@
+body {  
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zorgt ervoor dat de body altijd minimaal de hoogte van het scherm heeft */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #333;
+}
+main {
+    flex-grow: 1; /* Zorgt ervoor dat de inhoud de beschikbare ruimte opvult */
+}
+
+
+
+header {
+    background: #13235d;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.7em;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff; /* Standaard kleur van de links */
+    text-decoration: none; /* Verwijdert onderstreping */
+    font-size: 16px; /* Voeg een standaard lettergrootte toe */
+    padding: 5px 10px; /* Voor een comfortabelere klikruimte */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Soepele overgangseffecten */
+}
+
+nav ul li a:hover {
+    color: #13235d; /* Verandert de tekstkleur bij hover */
+    background-color: #ffffff; /* Voeg een subtiele achtergrondkleur toe */
+    border-radius: 5px; /* Rond hoeken af voor een zachter effect */
+    text-decoration: underline; /* Onderstreep de tekst bij hover */
+}
+/* Algemeen stijlen voor de sectie */
+#kenteken-checker {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 600px;
+}
+
+#kenteken-checker h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#kenteken-checker p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Stijl voor de kentekeninvoer */
+.license-plate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.country-code {
+    background-color: #004aad;
+    color: white;
+    padding: 6px 11px;
+    font-size: 20px;
+    border-radius: 5px 0 0 5px;
+}
+
+.license-plate-text {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #004aad;
+    border-radius: 5px;
+    width: 160px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.license-plate-text:focus {
+    outline: none;
+    border-color: #0055e7;
+}
+
+/* Stijl voor de knop */
+.button {
+    background-color: #13235d;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #00368d;
+}
+
+/* Stijl voor de container om alles goed te positioneren */
+#kenteken-checker .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zorgt ervoor dat alles in het midden komt */
+    justify-content: flex-start;
+}
+
+/* Stijl voor de output onder de knop */
+#kentekenResult {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%; /* Zorg ervoor dat de output niet uit de container valt */
+    max-width: 500px; /* Stel een maximale breedte in voor de output */
+}
+
+/* Resultaten stijl */
+.output {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#kentekenResult ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#kentekenResult li {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #13235d;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 200px;
+}
+
+
+
+/* Media Queries voor kleinere schermen */
+
+/* Voor schermen breder dan 768px (bijv. tablets in landschapmodus) */
+@media (max-width: 768px) {
+    .license-plate-text {
+        width: 120px; /* Kleinere breedte voor invoerveld */
+        font-size: 16px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #kenteken-checker h2 {
+        font-size: 22px;
+    }
+
+    #kenteken-checker p {
+        font-size: 14px;
+    }
+
+    /* Zorg ervoor dat de invoervelden zich goed schalen */
+    .license-plate {
+        flex-direction: row; /* Stapelt de elementen verticaal op */
+    }
+
+    footer {
+        font-size: 14px; /* Kleiner lettertype in de footer */
+        padding: 15px; /* Iets meer padding in de footer */
+    }
+}
+/* Voor schermen kleiner dan 480px (bijv. smartphones) */
+@media (max-width: 480px) {
+    .license-plate-text {
+        width: 100%; /* Het invoerveld neemt de volledige breedte in beslag */
+        font-size: 14px;
+        padding: 10px; /* Meer padding voor gebruiksgemak */
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    #kenteken-checker h2 {
+        font-size: 18px;
+    }
+
+    #kenteken-checker p {
+        font-size: 13px;
+    }
+
+    /* Zorg ervoor dat de container niet te groot wordt */
+    #kenteken-checker .container {
+        padding: 10px;
+    }
+
+    #kentekenResult {
+        max-width: 400px;
+    }
+}
